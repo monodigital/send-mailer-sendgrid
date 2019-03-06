@@ -36,11 +36,11 @@ let MailerService = class MailerService {
     }
     sendMail(mailData) {
         return __awaiter(this, void 0, void 0, function* () {
-            mailData.html = pug.renderFile(__dirname + '/../' + this.mailerOptions.template.dir + mailData.template + '.pug', mailData.context);
+            mailData.html = pug.renderFile(this.mailerOptions.template.dir + mailData.template + '.pug', mailData.context);
             if (!mailData.from) {
                 mailData.from = this.mailerOptions.defaults.from;
             }
-            return yield this.mailService.sendMail(mailData);
+            return yield this.mailService.send(mailData);
         });
     }
 };

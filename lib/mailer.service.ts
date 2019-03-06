@@ -30,6 +30,6 @@ export class MailerService {
     if (!mailData.from) {
       mailData.from = this.mailerOptions.defaults.from;
     }
-    return await this.mailService.sendMail(mailData);
+    return await this.mailService.send(mailData);
   }
 }
