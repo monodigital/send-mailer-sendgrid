@@ -13,7 +13,7 @@ export interface MailData {
     text?: string;
     html?: string;
     content?: MailContent[];
-    context: {
+    context?: {
         [key: string]: string;
     };
     templateId?: string;
@@ -40,5 +40,5 @@ export interface MailData {
     };
     substitutionWrappers?: string[];
     isMultiple?: boolean;
-    template: string;
+    template?: string;
 }

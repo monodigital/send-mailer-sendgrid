@@ -17,7 +17,7 @@ export interface MailData {
     text?: string;
     html?: string;
     content?: MailContent[];
-    context: { [key: string]: string };
+    context?: { [key: string]: string };
     templateId?: string;
     
     personalizations?: PersonalizationData[];
@@ -43,5 +43,5 @@ export interface MailData {
     
     isMultiple?: boolean;
     
-    template: string;
+    template?: string;
 }
