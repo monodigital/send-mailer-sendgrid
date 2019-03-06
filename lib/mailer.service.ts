@@ -24,7 +24,7 @@ export class MailerService {
 
   public async sendMail(mailData: MailData): Promise<any> {
     mailData.html = pug.renderFile(
-        __dirname + '/../' + this.mailerOptions.template.dir + mailData.template + '.pug',
+        this.mailerOptions.template.dir + mailData.template + '.pug',
         mailData.context
     );
     if (!mailData.from) {
