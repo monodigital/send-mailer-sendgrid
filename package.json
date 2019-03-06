@@ -1,0 +1,40 @@
+{
+  "name": "@nest-modules/send-grid-mailer",
+  "version": "1.0.0",
+  "description": "A mailer module for Nest framework (node.js) only send grid",
+  "main": "dist/index.js",
+  "types": "dist/index",
+  "private": false,
+  "scripts": {
+    "preversion": "rm -rf dist && tsc -p tsconfig.json",
+    "version": "git add .",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nest-modules/mailer.git"
+  },
+  "keywords": [
+    "nest",
+    "sendgrid",
+    "mailer",
+    "nodejs"
+  ],
+  "author": "Giuseppe Cutuli <giuseppe@monodigital.studio>",
+  "contributors": [
+    "Giuseppe Cutuli <giuseppe@monodigital.studio>",
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@nestjs/common": "^5.7.2",
+    "@nestjs/core": "^5.7.2",
+    "@sendgrid/mail": "6.3.1",
+    "pug": "2.0.3",
+    "rxjs": "^5.5.6",
+    "typescript": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/pug": "^2.0.4",
+    "reflect-metadata": "^0.1.12"
+  }
+}
