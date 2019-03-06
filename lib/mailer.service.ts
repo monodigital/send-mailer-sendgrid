@@ -20,6 +20,7 @@ export class MailerService {
     }
     
     this.mailService = MailService;
+    this.mailService.setApiKey(mailerOptions.apiKey);
   }
 
   public async sendMail(mailData: MailData): Promise<any> {

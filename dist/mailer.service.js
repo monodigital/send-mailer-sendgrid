@@ -33,6 +33,7 @@ let MailerService = class MailerService {
             throw new Error('Api key sendgrid not found');
         }
         this.mailService = MailService;
+        this.mailService.setApiKey(mailerOptions.apiKey);
     }
     sendMail(mailData) {
         return __awaiter(this, void 0, void 0, function* () {
